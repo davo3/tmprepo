@@ -1,0 +1,19 @@
+{
+    "name": "davo3/tmprepo",
+    "description": "Test Composer project",
+    "authors": [
+        {
+            "name": "Dav",
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.4.28"
+    },
+    "autoload": {
+        "psr-4": {
+            "BootstrapUI\\": "src"
+        }
+    },
+
+}
