@@ -3,7 +3,7 @@
     "description": "Test Composer project",
     "authors": [
         {
-            "name": "Dav",
+            "name": "Dav"
         }
     ],
     "minimum-stability": "dev",
