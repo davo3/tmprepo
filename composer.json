@@ -8,11 +8,12 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "php": ">=5.4.28"
+        "php": ">=5.4.28",
+        "studio-42/elfinder": "~2.1"
     },
     "autoload": {
         "psr-4": {
-            "tmprepo\\": "src"
+            "Tmprepo\\": "src"
         }
     }
 }
