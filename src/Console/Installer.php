@@ -25,7 +25,7 @@ use Exception;
 class Installer
 {
 	
-	public static function postUpdate1(Event $event)
+	public static function postUpdate1(PackageEvent $event)
 	{
 		 
 		define('DS', DIRECTORY_SEPARATOR);
