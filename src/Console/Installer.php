@@ -24,7 +24,7 @@ use Exception;
 class Installer
 {
 	
-	public static function postUpdate1(Event $event)
+	public static function postUpdate1(PackageEvent $event)
 	{
 		 
 		define('DS', DIRECTORY_SEPARATOR);
@@ -38,6 +38,9 @@ class Installer
 		$io->write($vendorDir);
 		$io->write($rootDir);
 		
+		$name = $event->getOperation()->getInitialPackage()->getName();
+		var_dump($name);
+
 		return true;
 
 	}
