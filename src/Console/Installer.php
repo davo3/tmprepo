@@ -15,6 +15,7 @@
 namespace Tmprepo\Console;
 
 use Composer\Script\Event;
+use Composer\Installer\PackageEvent;
 use Exception;
 
 /**
