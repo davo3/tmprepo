@@ -15,6 +15,7 @@
 namespace Tmprepo\Console;
 
 use Composer\Script\Event;
+use Composer\Installer\PackageEvent;
 use Exception;
 
 /**
@@ -37,6 +38,10 @@ class Installer
 		$io->write($thisVendorDir);
 		$io->write($vendorDir);
 		$io->write($rootDir);
+		
+		$pckg = $event->getOperation()->getPackage();
+		
+		var_dump($pckg);
 	
 		return true;
 
