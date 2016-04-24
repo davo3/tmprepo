@@ -15,7 +15,6 @@
 namespace Tmprepo\Console;
 
 use Composer\Script\Event;
-use Composer\Installer\PackageEvent;
 use Exception;
 
 /**
@@ -25,7 +24,7 @@ use Exception;
 class Installer
 {
 	
-	public static function postUpdate1(PackageEvent $event)
+	public static function postUpdate1(Event $event)
 	{
 		 
 		define('DS', DIRECTORY_SEPARATOR);
@@ -38,13 +37,8 @@ class Installer
 		$io->write($thisVendorDir);
 		$io->write($vendorDir);
 		$io->write($rootDir);
-		
-		$pckg = $event->getOperation()->getPackage();
-		
-		var_dump($pckg);
 	
 		return true;
-
 	}
 
     /**
