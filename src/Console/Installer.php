@@ -27,9 +27,19 @@ class Installer
 	public static function postUpdate1(Event $event)
 	{
 		 
-		file_put_contents(ROOT . DS . 'tmp' . DS . time() . '.txt', json_encode($event, JSON_PRETTY_PRINT));
-		echo "post install";
+		define('DS', DIRECTORY_SEPARATOR);
+		
+		$thisVendorDir = dirname(dirname(__DIR__));
+		$vendorDir = dirname(dirname($thisVendorDir));
+		$rootDir = dirname($vendorDir);
+
+		$io = $event->getIO();
+		$io->write($thisVendorDir);
+		$io->write($vendorDir);
+		$io->write($rootDir);
+		
 		return true;
+
 	}
 
     /**
