@@ -38,7 +38,7 @@ class Installer
 		$io->write($vendorDir);
 		$io->write($rootDir);
 		
-		$packageName = $event->getOperation()->getPackage()->getName();
+		$packageName = $event->getOperation()->getInitialPackage()->getName();
 		var_dump($packageName);
 		
 		return true;
